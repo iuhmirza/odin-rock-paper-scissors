@@ -23,22 +23,32 @@ function getPlayerChoice () {
 function playRound(playerSelection, computerSelection) {
     console.log(playerSelection, computerSelection)
     if(playerSelection === computerSelection) {
+        console.log("Draw")
         return 0
     }
     if(playerSelection === rock) {
         if(computerSelection === paper) {
+            console.log("Lose")
             return -1
-        } else return 1
+        } else
+        console.log("Win")
+        return 1
     }
     if(playerSelection === scissors) {
         if(computerSelection === rock) {
+            console.log("Lose")
             return -1
-        } else return 1
+        } else
+        console.log("Win")
+        return 1
     }
     if(playerSelection === paper) {
         if(computerSelection === scissors) {
+            console.log("Lose")
             return -1
-        } else return 1
+        } else
+        console.log("Win")
+        return 1
 
     }
 }
