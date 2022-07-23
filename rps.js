@@ -7,7 +7,20 @@ function getComputerChoice() {
     return choice
 }
 
-function gameRound(playerSelection, computerSelection) {
+function getPlayerChoice () {
+    choice = prompt("Rock/Paper/Scissors")
+    choice = choice.toUpperCase()
+    switch(choice) {
+        case "ROCK":
+            return rock
+        case "PAPER":
+            return paper
+        case "SCISSORS":
+            return scissors
+    }
+}
+
+function playRound(playerSelection, computerSelection) {
     console.log(playerSelection, computerSelection)
     if(playerSelection === computerSelection) {
         return "Draw"
