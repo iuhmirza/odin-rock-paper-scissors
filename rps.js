@@ -23,23 +23,29 @@ function getPlayerChoice () {
 function playRound(playerSelection, computerSelection) {
     console.log(playerSelection, computerSelection)
     if(playerSelection === computerSelection) {
-        return "Draw"
+        return 0
     }
     if(playerSelection === rock) {
         if(computerSelection === paper) {
-            return "Lose"
-        } else return "Win"
+            return -1
+        } else return 1
     }
     if(playerSelection === scissors) {
         if(computerSelection === rock) {
-            return "Lose"
-        } else return "Win"
+            return -1
+        } else return 1
     }
     if(playerSelection === paper) {
         if(computerSelection === scissors) {
-            return "Lose"
-        } else return "Win"
+            return -1
+        } else return 1
 
     }
 }
-    
+
+function game() {
+    let winCount = 0
+    for(let i = 0; i<5; i++) {
+        winCount += playRound(getPlayerChoice(), getComputerChoice())
+    } if (winCount > 0) { return "You Win!"} else {return "get good scrub"}
+}
