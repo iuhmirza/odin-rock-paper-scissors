@@ -2,6 +2,10 @@ const rock = 1
 const paper = 2
 const scissors = 3
 
+const rockButton = document.querySelector('#rock');
+const paperButton = document.querySelector('#paper');
+const scissorsButton = document.querySelector('#scissors');
+
 function getComputerChoice() {
     choice = Math.floor(Math.random() * 3 + 1)
     return choice
@@ -52,10 +56,11 @@ function playRound(playerSelection, computerSelection) {
 
     }
 }
-
+/*
 function game() {
     let winCount = 0
     for(let i = 0; i<5; i++) {
         winCount += playRound(getPlayerChoice(), getComputerChoice())
     } if (winCount > 0) { return "You Win!"} else {return "get good scrub"}
 }
+*/
