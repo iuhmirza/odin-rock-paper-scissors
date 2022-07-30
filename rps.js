@@ -5,6 +5,9 @@ const scissors = 3
 const rockButton = document.querySelector('#rock');
 const paperButton = document.querySelector('#paper');
 const scissorsButton = document.querySelector('#scissors');
+const dialog = document.createElement('div');
+const body = document.querySelector('body')
+document.body.appendChild(dialog);
 
 function getComputerChoice() {
     choice = Math.floor(Math.random() * 3 + 1)
@@ -25,33 +28,32 @@ function getPlayerChoice () {
 }
 
 function playRound(playerSelection, computerSelection) {
-    console.log(playerSelection, computerSelection)
     if(playerSelection === computerSelection) {
-        console.log("Draw")
+        dialog.textContent= "Draw"
         return 0
     }
     if(playerSelection === rock) {
         if(computerSelection === paper) {
-            console.log("Lose")
+            dialog.textContent= "Lose"
             return -1
         } else
-        console.log("Win")
+        dialog.textContent= "Win"
         return 1
     }
     if(playerSelection === scissors) {
         if(computerSelection === rock) {
-            console.log("Lose")
+            dialog.textContent= "Lose"
             return -1
         } else
-        console.log("Win")
+        dialog.textContent= "Win"
         return 1
     }
     if(playerSelection === paper) {
         if(computerSelection === scissors) {
-            console.log("Lose")
+            dialog.textContent= "Lose"
             return -1
         } else
-        console.log("Win")
+        dialog.textContent= "Win"
         return 1
 
     }
