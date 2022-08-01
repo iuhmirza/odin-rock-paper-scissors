@@ -33,32 +33,35 @@ function getPlayerChoice () {
 function playRound(playerSelection, computerSelection) {
     if(playerSelection === computerSelection) {
         dialog.textContent= `DRAW: Player - ${playerScore} CPU - ${computerScore}`
-        return 0
     }
     if(playerSelection === rock) {
         if(computerSelection === paper) {
             dialog.textContent= `LOSE: Player - ${playerScore} CPU - ${++computerScore}`
-            return -1
         } else
         dialog.textContent= `WIN: Player - ${++playerScore} CPU - ${computerScore}`
-        return 1
     }
     if(playerSelection === scissors) {
         if(computerSelection === rock) {
             dialog.textContent= `LOSE: Player - ${playerScore} CPU - ${++computerScore}`
-            return -1
         } else
         dialog.textContent= `WIN: Player - ${++playerScore} CPU - ${computerScore}`
-        return 1
     }
     if(playerSelection === paper) {
         if(computerSelection === scissors) {
             dialog.textContent= `LOSE: Player - ${playerScore} CPU - ${++computerScore}`
-            return -1
         } else
         dialog.textContent= `WIN: Player - ${++playerScore} CPU - ${computerScore}`
-        return 1
 
+    }
+    if(playerScore === 5) {
+        dialog.textContent = `WINNER: Player - ${playerScore} CPU - ${computerScore}`
+        playerScore = 0
+        computerScore = 0
+    }
+    if(computerScore === 5) {
+        dialog.textContent = `LOSER: Player - ${playerScore} CPU - ${computerScore}`
+        playerScore = 0
+        computerScore = 0
     }
 }
 /*
