@@ -9,6 +9,9 @@ const dialog = document.createElement('div');
 const body = document.querySelector('body')
 document.body.appendChild(dialog);
 
+let playerScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     choice = Math.floor(Math.random() * 3 + 1)
     return choice
@@ -29,31 +32,31 @@ function getPlayerChoice () {
 
 function playRound(playerSelection, computerSelection) {
     if(playerSelection === computerSelection) {
-        dialog.textContent= "Draw"
+        dialog.textContent= `DRAW: Player - ${playerScore} CPU - ${computerScore}`
         return 0
     }
     if(playerSelection === rock) {
         if(computerSelection === paper) {
-            dialog.textContent= "Lose"
+            dialog.textContent= `LOSE: Player - ${playerScore} CPU - ${++computerScore}`
             return -1
         } else
-        dialog.textContent= "Win"
+        dialog.textContent= `WIN: Player - ${++playerScore} CPU - ${computerScore}`
         return 1
     }
     if(playerSelection === scissors) {
         if(computerSelection === rock) {
-            dialog.textContent= "Lose"
+            dialog.textContent= `LOSE: Player - ${playerScore} CPU - ${++computerScore}`
             return -1
         } else
-        dialog.textContent= "Win"
+        dialog.textContent= `WIN: Player - ${++playerScore} CPU - ${computerScore}`
         return 1
     }
     if(playerSelection === paper) {
         if(computerSelection === scissors) {
-            dialog.textContent= "Lose"
+            dialog.textContent= `LOSE: Player - ${playerScore} CPU - ${++computerScore}`
             return -1
         } else
-        dialog.textContent= "Win"
+        dialog.textContent= `WIN: Player - ${++playerScore} CPU - ${computerScore}`
         return 1
 
     }
