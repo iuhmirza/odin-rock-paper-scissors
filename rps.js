@@ -50,14 +50,4 @@ function playRound(playerSelection, computerSelection) {
         dialog.textContent= `WIN: Player - ${++playerScore} CPU - ${computerScore}`
 
     }
-    if(playerScore === 5) {
-        dialog.textContent = `WINNER: Player - ${playerScore} CPU - ${computerScore}`
-        playerScore = 0
-        computerScore = 0
-    }
-    if(computerScore === 5) {
-        dialog.textContent = `LOSER: Player - ${playerScore} CPU - ${computerScore}`
-        playerScore = 0
-        computerScore = 0
-    }
 }
