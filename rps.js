@@ -2,16 +2,29 @@ const rock = 1
 const paper = 2
 const scissors = 3
 
-const dialog = document.createElement('div');
-const buttons = document.querySelector('.buttons')
-buttons.appendChild(dialog);
-
 let playerScore = 0;
 let computerScore = 0;
+
+const dialog = document.createElement('div');
+dialog.classList.add('flex', 'button');
+const body = document.querySelector('body')
+body.appendChild(dialog);
+
+const resetButton = document.createElement('div');
+resetButton.classList.add('flex', 'button');
+resetButton.setAttribute("onclick", "reset()");
+resetButton.innerHTML = '<img src = "img/reset.png" class="icon">';
+body.appendChild(resetButton);
 
 function getComputerChoice() {
     choice = Math.floor(Math.random() * 3 + 1)
     return choice
+}
+
+function reset() {
+    dialog.textContent = '';
+    playerScore = 0;
+    computerScore = 0;
 }
 
 function playRound(playerSelection, computerSelection) {

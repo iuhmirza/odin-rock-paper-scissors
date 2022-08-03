@@ -2,9 +2,18 @@
     display: flex;
 }
 
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
 .center {
     justify-content: center;
     align-items: center;
+    gap: 4px;
 }
 .icon {
     width: 10vh;
