@@ -1,0 +1,24 @@
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+.icon {
+    width: 10vh;
+    height: auto;
+}
+
+.button {
+    border: none;
+    border-radius: 4px;
+    background-color: aliceblue;
+}
+.button:hover {
+    background-color: azure;
+}
+.button:active {
+    background-color: aliceblue;
+}

@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <script src="rps.js" defer></script>
     <title>Document</title>
 </head>
-<body>
-    <button id="rock" onclick="playRound(rock, getComputerChoice())">Rock</button>
-    <button id="paper" onclick="playRound(paper, getComputerChoice())">Paper</button>
-    <button id="scissors" onclick="playRound(scissors, getComputerChoice())">Scissors</button>
+<body class = "flex center">
+    <div class = "buttons">
+        <button onclick="playRound(rock, getComputerChoice())" class="button">
+            <img src="img/rock.png" alt="" class="icon"></button>
+        <button onclick="playRound(paper, getComputerChoice())" class="button">
+            <img src="img/paper.png" alt="" class="icon"></button>
+        <button onclick="playRound(scissors, getComputerChoice())" class="button">
+            <img src="img/scissors.png" alt="" class="icon"></button>
+    </div>
 </body>
 </html>

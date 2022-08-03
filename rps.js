@@ -3,8 +3,8 @@ const paper = 2
 const scissors = 3
 
 const dialog = document.createElement('div');
-const body = document.querySelector('body')
-document.body.appendChild(dialog);
+const buttons = document.querySelector('.buttons')
+buttons.appendChild(dialog);
 
 let playerScore = 0;
 let computerScore = 0;
