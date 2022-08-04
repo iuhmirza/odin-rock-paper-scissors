@@ -1,3 +1,12 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: aliceblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:lavender
+}
+
 .flex {
     display: flex;
 }
@@ -13,21 +22,26 @@
 .center {
     justify-content: center;
     align-items: center;
-    gap: 4px;
+}
+
+.gap {
+    gap: 8px;
 }
 .icon {
     width: 10vh;
     height: auto;
+    padding: 4px;
 }
 
 .button {
     border: none;
     border-radius: 4px;
-    background-color: aliceblue;
+    background-color: #7372a0 ;
 }
 .button:hover {
     background-color: azure;
+    color: #7372a0;
 }
 .button:active {
-    background-color: aliceblue;
+    background-color: #7372a0;
 }

@@ -8,14 +8,17 @@
     <script src="rps.js" defer></script>
     <title>Document</title>
 </head>
-<body class = "flex column center">
-    <div class = "buttons">
-        <button onclick="playRound(rock, getComputerChoice())" class="button">
-            <img src="img/rock.png" alt="" class="icon"></button>
-        <button onclick="playRound(paper, getComputerChoice())" class="button">
-            <img src="img/paper.png" alt="" class="icon"></button>
-        <button onclick="playRound(scissors, getComputerChoice())" class="button">
-            <img src="img/scissors.png" alt="" class="icon"></button>
+<body class ="flex center">
+    <div class = "flex column buttons gap">
+        <div class = "flex gap">
+            <button onclick="playRound(rock, getComputerChoice())" class="button">
+                <img src="img/rock.png" alt="" class="icon" draggable="false"></button>
+            <button onclick="playRound(paper, getComputerChoice())" class="button">
+                <img src="img/paper.png" alt="" class="icon" draggable="false"></button>
+            <button onclick="playRound(scissors, getComputerChoice())" class="button">
+                <img src="img/scissors.png" alt="" class="icon" draggable="false"></button>
+        </div>
     </div>
+
 </body>
 </html>

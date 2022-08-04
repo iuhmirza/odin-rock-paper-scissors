@@ -6,15 +6,15 @@ let playerScore = 0;
 let computerScore = 0;
 
 const dialog = document.createElement('div');
-dialog.classList.add('flex', 'button');
-const body = document.querySelector('body')
-body.appendChild(dialog);
+dialog.classList.add('flex', 'button', 'center');
+const column = document.querySelector('.buttons')
+column.appendChild(dialog);
 
 const resetButton = document.createElement('div');
-resetButton.classList.add('flex', 'button');
+resetButton.classList.add('flex', 'button', 'center');
 resetButton.setAttribute("onclick", "reset()");
-resetButton.innerHTML = '<img src = "img/reset.png" class="icon">';
-body.appendChild(resetButton);
+resetButton.innerHTML = '<img src = "img/reset.png" class="icon" draggable="false">';
+column.appendChild(resetButton);
 
 function getComputerChoice() {
     choice = Math.floor(Math.random() * 3 + 1)
@@ -29,7 +29,7 @@ function reset() {
 
 function playRound(playerSelection, computerSelection) {
     if(playerSelection === computerSelection) {
-        dialog.textContent= `DRAW: Player - ${playerScore} CPU - ${computerScore}`
+        dialog.textContent=`DRAW: Player - ${playerScore} CPU - ${computerScore}`
     }
     if(playerSelection === rock) {
         if(computerSelection === paper) {
